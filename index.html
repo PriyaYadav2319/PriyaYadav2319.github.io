@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priya Yadav | Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 25px 30px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #1e293b;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .section-content {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .active .section-content {
+      display: block;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .project h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #334155;
+    }
+
+    .project a {
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #1e293b;
+      color: white;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .toggle-button {
+      float: right;
+      font-size: 0.9rem;
+      background-color: #60a5fa;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+
+    .toggle-button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Priya Yadav</h1>
+    <p>Data Science Enthusiast | Machine Learning | NLP | Python Developer</p>
+    <div class="contact">
+      📞 +91 9870706564 | ✉ <a href="mailto:py546767@gmail.com">py546767@gmail.com</a> <br/>
+      🔗 <a href="https://www.linkedin.com/in/priya-yadav-5b6ab1274" target="_blank">LinkedIn</a> |
+      💻 <a href="https://github.com/PriyaYadav2319" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <section class="interactive-section">
+    <h2 onclick="toggleSection(this)">Skills <button class="toggle-button">Click</button></h2>
+    <div class="section-content">
+      <p><strong>Languages:</strong> Python, Java, Spark, C, JavaScript, R, Scala</p>
+      <p><strong>Databases:</strong> MySQL, MongoDB, Oracle</p>
+      <p><strong>Machine Learning:</strong> Regression, Classification, NLP, CNNs, Transformers (BERT)</p>
+      <p><strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly, Power BI</p>
+      <p><strong>Developer Tools:</strong> Figma, GitHub, AWS</p>
+    </div>
+  </section>
+
+  <section class="interactive-section">
+    <h2 onclick="toggleSection(this)">Education <button class="toggle-button">Click</button></h2>
+    <div class="section-content">
+      <p><strong>Master in Data Science and Big Data Analytics</strong><br/>
+      SDBI (Patkar Varde College), Aug 2023 – Present</p>
+      <p><strong>Bachelor in Computer Science</strong><br/>
+      Lords Universal Degree College, CGPA: 9.05 | Jul 2020 – Apr 2023</p>
+    </div>
+  </section>
+
+  <section class="interactive-section">
+    <h2 onclick="toggleSection(this)">Projects <button class="toggle-button">Click</button></h2>
+    <div class="section-content">
+      <div class="project">
+        <h3>NAARI: A Voice Assistant</h3>
+        <ul>
+          <li>Automates tasks using speech recognition.</li>
+          <li>Integrated Twilio, weather API, and web search.</li>
+          <li>🔗 <a href="https://github.com/PriyaYadav2319/naari-voice-assistant" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Global Superstore Power BI Dashboard</h3>
+        <ul>
+          <li>Data visualization on KPIs, sales, regions, customer patterns.</li>
+          <li>🔗 <a href="https://github.com/PriyaYadav2319/global-superstore-powerbi" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Web Scraping and Sentiment Analysis</h3>
+        <ul>
+          <li>Scraped 50+ sites using BeautifulSoup/Selenium.</li>
+          <li>Used BERT for classification and trend analytics.</li>
+          <li>🔗 <a href="https://github.com/PriyaYadav2319/sentiment-analysis-scraping" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Chest X-ray Image Classification</h3>
+        <ul>
+          <li>Built CNN model for pneumonia detection in X-rays.</li>
+          <li>Data preprocessing and accuracy improvement techniques.</li>
+          <li>🔗 <a href="https://github.com/PriyaYadav2319/chest-xray-classification" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="interactive-section">
+    <h2 onclick="toggleSection(this)">Research Paper <button class="toggle-button">Click</button></h2>
+    <div class="section-content">
+      <p><strong>Title:</strong> Generative AI: Shaping the Future While Disrupting the Present</p>
+      <p>Published in IJFMR (Sep 2024) – <a href="#">View Paper</a></p>
+      <p>Explores foundational models, applications, and ethics of generative AI.</p>
+    </div>
+  </section>
+
+  <section class="interactive-section">
+    <h2 onclick="toggleSection(this)">Certifications <button class="toggle-button">Click</button></h2>
+    <div class="section-content">
+      <ul>
+        <li>Google Cloud – Machine Learning & Generative AI</li>
+        <li>Figma UI Unix Designing – Lords Universal Degree College</li>
+        <li>Project Exhibition – Lords Universal Degree College</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Priya Yadav</p>
+  </footer>
+
+  <script>
+    function toggleSection(element) {
+      const section = element.parentElement;
+      section.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
