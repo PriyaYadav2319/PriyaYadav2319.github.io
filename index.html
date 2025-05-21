@@ -49,6 +49,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s;
+      overflow: hidden;
     }
 
     section:hover {
@@ -62,13 +63,29 @@
       cursor: pointer;
     }
 
+    .section-image {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+    }
+
+    .section-image:hover {
+      transform: scale(1.03);
+    }
+
     .section-content {
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
     }
 
     .active .section-content {
-      display: block;
+      max-height: 1000px;
+      opacity: 1;
     }
 
     ul {
@@ -137,9 +154,11 @@
     </div>
   </header>
 
+  <!-- Skills -->
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Skills <button class="toggle-button">Click</button></h2>
     <div class="section-content">
+      <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/data-2691445_960_720.jpg" alt="Skills" class="section-image">
       <p><strong>Languages:</strong> Python, Java, Spark, C, JavaScript, R, Scala</p>
       <p><strong>Databases:</strong> MySQL, MongoDB, Oracle</p>
       <p><strong>Machine Learning:</strong> Regression, Classification, NLP, CNNs, Transformers (BERT)</p>
@@ -148,9 +167,11 @@
     </div>
   </section>
 
+  <!-- Education -->
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Education <button class="toggle-button">Click</button></h2>
     <div class="section-content">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/10/classroom-1867764_960_720.jpg" alt="Education" class="section-image">
       <p><strong>Master in Data Science and Big Data Analytics</strong><br/>
       SDBI (Patkar Varde College), Aug 2023 – Present</p>
       <p><strong>Bachelor in Computer Science</strong><br/>
@@ -158,9 +179,11 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Projects <button class="toggle-button">Click</button></h2>
     <div class="section-content">
+      <img src="https://cdn.pixabay.com/photo/2019/09/06/16/45/web-4459396_960_720.jpg" alt="Projects" class="section-image">
       <div class="project">
         <h3>NAARI: A Voice Assistant</h3>
         <ul>
@@ -195,18 +218,22 @@
     </div>
   </section>
 
+  <!-- Research -->
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Research Paper <button class="toggle-button">Click</button></h2>
     <div class="section-content">
+      <img src="https://cdn.pixabay.com/photo/2017/06/10/06/27/research-2386156_960_720.jpg" alt="Research Paper" class="section-image">
       <p><strong>Title:</strong> Generative AI: Shaping the Future While Disrupting the Present</p>
       <p>Published in IJFMR (Sep 2024) – <a href="https://www.ijfmr.com/research-paper.php?id=28085">View Paper</a></p>
       <p>Explores foundational models, applications, and ethics of generative AI.</p>
     </div>
   </section>
 
+  <!-- Certifications -->
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Certifications <button class="toggle-button">Click</button></h2>
     <div class="section-content">
+      <img src="https://cdn.pixabay.com/photo/2017/01/20/19/20/certificate-1990489_960_720.jpg" alt="Certifications" class="section-image">
       <ul>
         <li>Google Cloud – Machine Learning & Generative AI</li>
         <li>Figma UI Unix Designing – Lords Universal Degree College</li>
