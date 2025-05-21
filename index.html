@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Priya Yadav | Data Science Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
     * {
       margin: 0;
@@ -14,9 +14,8 @@
     }
 
     body {
-      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
-      color: #333;
-      line-height: 1.6;
+      background: linear-gradient(to right, #f9fafb, #e5e7eb);
+      color: #1f2937;
       padding: 20px;
     }
 
@@ -25,69 +24,73 @@
       color: white;
       padding: 50px 20px;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-in-out;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    header img {
+      width: 130px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid #60a5fa;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
 
     .contact a {
-      color: #60a5fa;
+      color: #93c5fd;
       text-decoration: none;
-      margin: 0 5px;
+      margin: 0 6px;
     }
 
     section {
       background: white;
-      margin: 20px auto;
-      padding: 25px 30px;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s;
+      margin: 25px auto;
+      padding: 30px;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
     }
 
     section:hover {
-      transform: scale(1.01);
+      transform: translateY(-5px);
     }
 
     h2 {
       font-size: 1.8rem;
       color: #1e293b;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       cursor: pointer;
     }
 
     .section-content {
       display: none;
-      animation: fadeIn 0.5s ease-in-out;
+      animation: fadeIn 0.5s ease-in-out forwards;
     }
 
     .active .section-content {
       display: block;
     }
 
-    ul {
-      margin-left: 20px;
+    .toggle-button {
+      font-size: 0.8rem;
+      background-color: #60a5fa;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 6px 10px;
+      cursor: pointer;
     }
 
-    .project h3 {
-      font-size: 1.2rem;
-      margin: 10px 0;
-      color: #334155;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: #2563eb;
-    }
-
-    .project a:hover {
-      text-decoration: underline;
+    .toggle-button:hover {
+      background-color: #2563eb;
     }
 
     footer {
@@ -96,13 +99,13 @@
       padding: 20px;
       background-color: #1e293b;
       color: white;
-      border-radius: 12px;
+      border-radius: 16px;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -110,28 +113,102 @@
       }
     }
 
-    .toggle-button {
-      float: right;
-      font-size: 0.9rem;
-      background-color: #60a5fa;
-      border: none;
-      border-radius: 6px;
-      color: white;
-      padding: 4px 10px;
+    .institution-logo {
+      width: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .edu-subsection {
+      background-color: #f3f4f6;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
       cursor: pointer;
     }
 
-    .toggle-button:hover {
-      background-color: #2563eb;
+    .edu-subsection:hover {
+      background-color: #e5e7eb;
     }
+
+    .edu-subsection.open .edu-header p {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .edu-header h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #111827;
+    }
+
+    .edu-header p {
+      display: none;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .logos img {
+      width: 32px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .projects-section .project-card {
+  position: relative;
+  margin-bottom: 20px;
+  height: 220px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.projects-section .project-card:hover {
+  transform: scale(1.01);
+}
+
+.projects-section .project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay */
+  z-index: 1;
+}
+
+.projects-section .project-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px 30px;
+  color: white;
+}
+
+.projects-section .project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.projects-section .project-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.projects-section .project-content a {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
   <header>
+    <img src="https://avatars.githubusercontent.com/u/103004451?v=4" alt="Priya Yadav">
     <h1>Priya Yadav</h1>
-    <p>Data Science Enthusiast | Machine Learning | NLP | Python Developer</p>
+    <p>Data Scientist | Machine Learning | Gen AI | Python Fullstack Developer</p>
     <div class="contact">
-      📞 +91 9870706564 | ✉ <a href="mailto:py546767@gmail.com">py546767@gmail.com</a> <br/>
+      📞 +91 9870706564 | ✉ <a href="mailto:py192008@gmail.com">py192008@gmail.com</a><br/>
       🔗 <a href="https://www.linkedin.com/in/priya-yadav-5b6ab1274" target="_blank">LinkedIn</a> |
       💻 <a href="https://github.com/PriyaYadav2319" target="_blank">GitHub</a>
     </div>
@@ -140,80 +217,176 @@
   <section class="interactive-section">
     <h2 onclick="toggleSection(this)">Skills <button class="toggle-button">Click</button></h2>
     <div class="section-content">
-      <p><strong>Languages:</strong> Python, Java, Spark, C, JavaScript, R, Scala</p>
-      <p><strong>Databases:</strong> MySQL, MongoDB, Oracle</p>
-      <p><strong>Machine Learning:</strong> Regression, Classification, NLP, CNNs, Transformers (BERT)</p>
-      <p><strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly, Power BI</p>
-      <p><strong>Developer Tools:</strong> Figma, GitHub, AWS</p>
+      <div class="edu-subsection" onclick="this.classList.toggle('open')">
+        <div class="edu-header">
+          <h3>Programming Languages</h3>
+          <p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala" width="30"/>
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-subsection" onclick="this.classList.toggle('open')">
+        <div class="edu-header">
+          <h3>Machine Learning & Deep Learning</h3>
+          <p>Regression, Classification, NLP, CNNs, Transformers (BERT), Clustering, XGBoost</p>
+        </div>
+      </div>
+
+      <div class="edu-subsection" onclick="this.classList.toggle('open')">
+        <div class="edu-header">
+          <h3>Databases</h3>
+          <p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" width="30"/>
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-subsection" onclick="this.classList.toggle('open')">
+        <div class="edu-header">
+          <h3>Tools & Visualization</h3>
+          <p>
+            Matplotlib, Seaborn, Plotly, Power BI<br/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="30"/>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="30"/>
+            <img src="https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png" alt="PBI" width="30"/>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
+   <section class="interactive-section">
+  <h2 onclick="toggleSection(this)">Education <button class="toggle-button">Click</button></h2>
+  <div class="section-content">
 
-  <section class="interactive-section">
-    <h2 onclick="toggleSection(this)">Education <button class="toggle-button">Click</button></h2>
-    <div class="section-content">
-      <p><strong>Master in Data Science and Big Data Analytics</strong><br/>
-      SDBI (Patkar Varde College), Aug 2023 – Present</p>
-      <p><strong>Bachelor in Computer Science</strong><br/>
-      Lords Universal Degree College, CGPA: 9.05 | Jul 2020 – Apr 2023</p>
+    <div class="edu-subsection" style="background-image: url('https://sdbi.in/wp-content/uploads/2020/02/SDBI_Logo-Full.png'); background-size: 60px; background-repeat: no-repeat; background-position: 20px center; padding-left: 90px;" onclick="this.classList.toggle('open')">
+      <div class="edu-header">
+        <h3>Master in Data Science and Big Data Analytics</h3>
+        <p>School of Data Science and Business Intelligence<br/>Aug 2023 – Apr 2025</p>
+      </div>
     </div>
-  </section>
 
-  <section class="interactive-section">
-    <h2 onclick="toggleSection(this)">Projects <button class="toggle-button">Click</button></h2>
-    <div class="section-content">
-      <div class="project">
+    <div class="edu-subsection" style="background-image: url('https://cdn.prod.website-files.com/5ff0305526c16d0e45951e02/603906cd9b51020f56e30df7_IMG_0109.jpg'); background-size: 60px; background-repeat: no-repeat; background-position: 20px center; padding-left: 90px;" onclick="this.classList.toggle('open')">
+      <div class="edu-header">
+        <h3>Bachelor in Computer Science</h3>
+        <p>Lords Universal Degree College<br/>Jul 2020 – Apr 2023</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+ <section class="interactive-section projects-section">
+  <h2 onclick="toggleSection(this)">Projects <button class="toggle-button">Click</button></h2>
+  <div class="section-content">
+
+    <!-- NAARI: Voice Assistant -->
+    <div class="project-card" style="background-image: url('https://img.freepik.com/free-vector/voice-assistant-abstract-concept-illustration_335657-3681.jpghttps://img.freepik.com/premium-vector/voice-assistant-sound-wave-microphone-voice-control-technology-voice-sound-recognition-ai-assistant-voice-background_176516-289.jpg');">
+      <div class="project-content">
         <h3>NAARI: A Voice Assistant</h3>
-        <ul>
-          <li>Automates tasks using speech recognition.</li>
-          <li>Integrated Twilio, weather API, and web search.</li>
-          <li>🔗 <a href="https://github.com/PriyaYadav2319/naari-voice-assistant" target="_blank">GitHub</a></li>
-        </ul>
+        <p>
+          Automates tasks using speech recognition.<br />
+          Integrated Twilio, weather API, and web search.<br />
+          <a href="https://github.com/PriyaYadav2319/naari-voice-assistant" target="_blank">GitHub</a>
+        </p>
       </div>
-      <div class="project">
+    </div>
+
+    <!-- Power BI Dashboard -->
+    <div class="project-card" style="background-image: url('https://www.atptech.com/wp-content/uploads/photo_powerbi.jpg');">
+      <div class="project-content">
         <h3>Global Superstore Power BI Dashboard</h3>
-        <ul>
-          <li>Data visualization on KPIs, sales, regions, customer patterns.</li>
-          <li>🔗 <a href="https://github.com/PriyaYadav2319/E-Commerce-Product-Recommendation-System" target="_blank">GitHub</a></li>
-        </ul>
+        <p>
+          Data visualization on KPIs, sales, regions, customer patterns.<br />
+          <a href="https://github.com/PriyaYadav2319/E-Commerce-Product-Recommendation-System" target="_blank">GitHub</a>
+        </p>
       </div>
-      <div class="project">
+    </div>
+
+    <!-- Web Scraping and Sentiment Analysis -->
+    <div class="project-card" style="background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*sQlJiAlcD92zDEZQPQm90g.png');">
+      <div class="project-content">
         <h3>Web Scraping and Sentiment Analysis</h3>
-        <ul>
-          <li>Scraped 50+ sites using BeautifulSoup/Selenium.</li>
-          <li>Used BERT for classification and trend analytics.</li>
-          <li>🔗 <a href="https://github.com/PriyaYadav2319/Web-Scraping-and-Sentiment-Analysis-with-Flask" target="_blank">GitHub</a></li>
-        </ul>
+        <p>
+          Scraped 50+ sites using BeautifulSoup/Selenium.<br />
+          Used BERT for classification and trend analytics.<br />
+          <a href="https://github.com/PriyaYadav2319/Web-Scraping-and-Sentiment-Analysis-with-Flask" target="_blank">GitHub</a>
+        </p>
       </div>
-      <div class="project">
+    </div>
+
+    <!-- Chest X-ray Classification -->
+    <div class="project-card" style="background-image: url('https://images.zapnito.com/uploads/426U0JhoTyOpvTgWpThW_representive-cxr-cases.png');">
+      <div class="project-content">
         <h3>Chest X-ray Image Classification</h3>
-        <ul>
-          <li>Built CNN model for pneumonia detection in X-rays.</li>
-          <li>Data preprocessing and accuracy improvement techniques.</li>
-          <li>🔗 <a href="https://github.com/PriyaYadav2319/Chest-X-ray-Image-classification" target="_blank">GitHub</a></li>
-        </ul>
+        <p>
+          Built CNN model for pneumonia detection in X-rays.<br />
+          Applied preprocessing and accuracy optimization techniques.<br />
+          <a href="https://github.com/PriyaYadav2319/Chest-X-ray-Image-classification" target="_blank">GitHub</a>
+        </p>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+
+ <section class="interactive-section">
+  <h2 onclick="toggleSection(this)">
+    Research Paper <button class="toggle-button">Click</button>
+  </h2>
+  <div class="section-content">
+    <img src="https://www.ijfmr.com/images/logo.png" alt="IJFMR Logo" style="width: 120px; height: auto; margin-bottom: 10px; border-radius: 8px;">
+    <p><strong>Title:</strong> Generative AI: Shaping the Future While Disrupting the Present</p>
+    <p>Published in IJFMR (Sep 2024) – <a href="https://www.ijfmr.com/research-paper.php?id=28085" target="_blank">View Paper</a></p>
+    <p>Explores foundational models, applications, and ethics of generative AI.</p>
+  </div>
+</section>
+
+
 
   <section class="interactive-section">
-    <h2 onclick="toggleSection(this)">Research Paper <button class="toggle-button">Click</button></h2>
-    <div class="section-content">
-      <p><strong>Title:</strong> Generative AI: Shaping the Future While Disrupting the Present</p>
-      <p>Published in IJFMR (Sep 2024) – <a href="https://www.ijfmr.com/research-paper.php?id=28085">View Paper</a></p>
-      <p>Explores foundational models, applications, and ethics of generative AI.</p>
+  <h2 onclick="toggleSection(this)">Certifications <button class="toggle-button">Click</button></h2>
+  <div class="section-content">
+    <div class="edu-subsection">
+      <div class="edu-header">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" width="30" style="vertical-align: middle; margin-right: 10px;">
+          Google Cloud – Machine Learning & Generative AI
+        </h3>
+        <p>Credential in AI/ML fundamentals using Google Cloud technologies.</p>
+      </div>
     </div>
-  </section>
 
-  <section class="interactive-section">
-    <h2 onclick="toggleSection(this)">Certifications <button class="toggle-button">Click</button></h2>
-    <div class="section-content">
-      <ul>
-        <li>Google Cloud – Machine Learning & Generative AI</li>
-        <li>Figma UI Unix Designing – Lords Universal Degree College</li>
-        <li>Project Exhibition – Lords Universal Degree College</li>
-      </ul>
+    <div class="edu-subsection">
+      <div class="edu-header">
+        <h3>
+          <img src="https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png" alt="Figma" width="30" style="vertical-align: middle; margin-right: 10px;">
+          Figma UI Unix Designing 
+        </h3>
+        <p>Learned professional UI/UX wireframing and prototyping in Figma.</p>
+      </div>
     </div>
-  </section>
+
+    <div class="edu-subsection">
+      <div class="edu-header">
+        <h3>
+          <img src="https://img.icons8.com/fluency/48/project.png" alt="Project Exhibition" width="30" style="vertical-align: middle; margin-right: 10px;">
+          Project Exhibition
+        </h3>
+        <p>Recognized for presenting an innovative AI-based solution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2025 Priya Yadav</p>
@@ -221,9 +394,9 @@
 
   <script>
     function toggleSection(element) {
-      const section = element.parentElement;
+      const section = element.closest('section');
       section.classList.toggle("active");
     }
   </script>
 </body>
-</html> 
+</html>
